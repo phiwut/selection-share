@@ -6,8 +6,6 @@ Feel free to contribute to the code or submit a design for the Tooltip!
 
 **[Demo](http://htmlpreview.github.io/?https://github.com/phippuuuu/selection-share/blob/master/Demo.html)**
 
-*The foundation of the code is from [highlighter.js](https://github.com/huffpostlabs/highlighter.js)*
-
 ##Todo:
 - [x] display tooltip over selected text
 - [ ] add correct links
@@ -22,3 +20,7 @@ Feel free to contribute to the code or submit a design for the Tooltip!
   - [ ] let people on [Eager](https://eager.io/) costumize it
 - [ ] add button to copy link to paragraph
 - [ ] add more social networks
+
+
+*The foundation of the code is from [highlighter.js](https://github.com/huffpostlabs/highlighter.js)*
+*Icons from [material design icons](https://materialdesignicons.com/)*

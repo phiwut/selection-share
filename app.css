@@ -10,12 +10,12 @@
 }
 
 ::selection {
-  background: #0D1126;
+    background: #6d707c;
   /* Safari */
 }
 
 ::-moz-selection {
-  background: #0D1126;
+    background: #6d707c;
   /* Firefox */
 }
 
@@ -54,7 +54,7 @@ button.save-pref-btn {
 .btn-left:hover,
 .btn-right:hover,
 .save-pref-btn:hover {
-  background: #eeeeee;
+    background: #0d1126;
 }
 
 ​
