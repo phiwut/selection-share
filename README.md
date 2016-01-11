@@ -4,7 +4,7 @@ Share selected text.
 This plugin is ment to make it easy to share a text from a Website. When finished, it will be avaiable on the [Eager](https://eager.io/) when finished.
 Feel free to contribute to the code or submit a design for the Tooltip!
 
-*The foundation of the code is from [highlighter.js]()https://github.com/huffpostlabs/highlighter.js*
+*The foundation of the code is from [highlighter.js](https://github.com/huffpostlabs/highlighter.js)*
 
 ##Todo:
 - [x] display tooltip over selected text
