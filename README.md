@@ -11,7 +11,7 @@ Feel free to contribute to the code or submit a design for the Tooltip!
 - [ ] add correct links
   - [ ] Facebook
   - [ ] Twitter
-- [] Add to [Eager](https://eager.io/)
+- [ ] Add to [Eager](https://eager.io/)
 
 ##Optional:
 - [ ] rewrite in Javascript instead of jQuerry
