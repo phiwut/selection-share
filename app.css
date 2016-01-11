@@ -9,15 +9,13 @@
   position: absolute;
 }
 
-::selection {
+/*::selection {
     background: #6d707c;
-  /* Safari */
 }
 
 ::-moz-selection {
     background: #6d707c;
-  /* Firefox */
-}
+}*/
 
 .btn-caret {
   width: 0; 
@@ -54,7 +52,7 @@ button.save-pref-btn {
 .btn-left:hover,
 .btn-right:hover,
 .save-pref-btn:hover {
-    background: #0d1126;
+    background: #25283b;
 }
 
 ​

@@ -159,6 +159,7 @@
                                 dummy.parentNode.removeChild(dummy);
                             }
                         }
+                        $('#selTwitter').attr("href", "https://twitter.com/intent/tweet?text=" + selText);
                     } else if (document.selection && document.selection.createRange) {
                         range = document.selection.createRange();
                         expandedSelRange = range.duplicate();
