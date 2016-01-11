@@ -10,12 +10,12 @@
 }
 
 ::selection {
-  background: #ebebeb;
+  background: #0D1126;
   /* Safari */
 }
 
 ::-moz-selection {
-  background: #ebebeb;
+  background: #0D1126;
   /* Firefox */
 }
 
@@ -25,7 +25,7 @@
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	
-	border-bottom: 5px solid #ebebeb;
+	border-bottom: 5px solid #0D1126;
   position: absolute;
   top: -5px;
   left: 10px;
@@ -41,14 +41,14 @@
 .btn-left,
 .btn-right {
   padding: 3px 5px 0 5px;
-  border: 1px solid #ebebeb;
+  border: 1px solid #0D1126;
   cursor: pointer;
 }
 
 .btn-left,
 .btn-right,
 button.save-pref-btn {
-  background: #ebebeb;
+  background: #0D1126;
 }
 
 .btn-left:hover,
