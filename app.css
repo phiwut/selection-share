@@ -1,0 +1,60 @@
+.share-highlight-btn {
+  position: absolute;
+  width: 300px;
+  top: 25px;
+  left: -30px;
+}
+
+.holder {
+  position: absolute;
+}
+
+::selection {
+  background: #ebebeb;
+  /* Safari */
+}
+
+::-moz-selection {
+  background: #ebebeb;
+  /* Firefox */
+}
+
+.btn-caret {
+  width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-bottom: 5px solid #ebebeb;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+}
+
+.btn-left,
+.btn-right {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+}
+
+.btn-left,
+.btn-right {
+  padding: 3px 5px 0 5px;
+  border: 1px solid #ebebeb;
+  cursor: pointer;
+}
+
+.btn-left,
+.btn-right,
+button.save-pref-btn {
+  background: #ebebeb;
+}
+
+.btn-left:hover,
+.btn-right:hover,
+.save-pref-btn:hover {
+  background: #eeeeee;
+}
+
+​
