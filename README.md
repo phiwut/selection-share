@@ -8,9 +8,9 @@ Feel free to contribute to the code or submit a design for the Tooltip!
 
 ##Todo:
 - [x] display tooltip over selected text
-- [ ] add correct links
-  - [ ] Facebook
-  - [ ] Twitter
+- [x] add correct links
+  - [x] Clipboard
+  - [x] Twitter
 - [ ] Add to [Eager](https://eager.io/)
 
 ##Optional:
