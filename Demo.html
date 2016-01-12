@@ -20,7 +20,7 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
 		<div class='share-highlight-btn'>
 			<div class='btn-caret'></div>
 			<div class='btn-left'><a href=""><img src="images/link.png" alt="facebook" height="20" width="20"></a></div>
-			<div class='btn-right'><a id="selTwitter" href=""><img src="images/twitter.png" alt="twitter" height="20" width="20"></a></div>
+			<div class='btn-right'><a href="http://www.uniqueUrlForSelectionShareTwitter.com"><img src="images/twitter.png" alt="twitter" height="20" width="20"></a></div>
 		</div>
 	</span>
 
@@ -34,6 +34,12 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
 		    $('.holder').mousedown(function(){
 		        return false;
 		    });
+			
+			/*$('.holder').mousedown(
+				sel = window.getSelection();
+                selText = sel.toString();
+				$("a[href='http://www.uniqueUrlForSelectionShareTwitter.com']").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim())
+			);*/
 
 		    $('.btn-right').click(function(){
 		        $('.holder').hide();

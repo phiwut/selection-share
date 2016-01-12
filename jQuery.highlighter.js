@@ -1,20 +1,5 @@
 /* global jQuery */
 
-/*
- * Highlighter.js 1.0
- *
- * Author: Matthew Conlen <matt.conlen@huffingtonpost.com>
- *         Huffington Post Labs
- *
- * Copyright 2012: Huffington Post Labs
- *
- * This program is free software. It comes without any warranty, to
- * the extent permitted by applicable law. You can redistribute it
- * and/or modify it under the terms of the WTFPL, Version 2, as
- * published by Sam Hocevar. See http://sam.zoy.org/wtfpl/
- * for more details.
- */
-
    (function ($) {
     /*
      * Code for triple click from
@@ -109,7 +94,6 @@
                     if (window.getSelection) {
                         sel = window.getSelection();
                         selText = sel.toString();
-
                         if ($.trim(selText) === '' || selText.split(' ').length < settings.minWords) return;
 
                         if (sel.getRangeAt && sel.rangeCount) {
@@ -157,9 +141,8 @@
                                 expandedSelRange.insertNode(dummy);
                                 position = $(dummy).offset();
                                 dummy.parentNode.removeChild(dummy);
-                            }
-                        }
-                        $('#selTwitter').attr("href", "https://twitter.com/intent/tweet?text=" + encodeURIComponent(selText.trim());
+                            }							
+                        }                        
                     } else if (document.selection && document.selection.createRange) {
                         range = document.selection.createRange();
                         expandedSelRange = range.duplicate();
