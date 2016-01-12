@@ -1,7 +1,7 @@
 /* global jQuery */
 
 $(document).ready(function () {	
-	$("body").append("<script>var clipboard = new Clipboard('#copySelectionShare');</script>");
+	$("body").append("<script>var clipboard = new Clipboard(\'#copySelectionShare\');</script>");
 
     $("html").highlighter({ "selector": ".holder" });
 
