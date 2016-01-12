@@ -1,0 +1,24 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "style",
+        "src": "app.css"
+      }
+    ],
+    "body": [
+      {
+        "type": "script",
+        "src": "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+      },
+      {
+        "type": "script",
+        "contents": "jQuery.highlighter.js"
+      },
+      {
+        "type": "script",
+        "contents": "clipboard.min.js"
+      }
+    ]
+  }
+}
