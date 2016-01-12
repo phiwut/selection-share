@@ -2,8 +2,6 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="app.css" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -19,33 +17,17 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
 <span class='holder'>
 		<div class='share-highlight-btn'>
 			<div class='btn-caret'></div>
-			<div class='btn-left'><a href=""><img src="images/link.png" alt="facebook" height="20" width="20"></a></div>
-			<div class='btn-right'><a href="http://www.uniqueUrlForSelectionShareTwitter.com"><img src="images/twitter.png" alt="twitter" height="20" width="20"></a></div>
+			<div class='btn-left'><a id="copySelectionShare" data-clipboard-text="copiedText" title="copy"><img src="images/copy.png" alt="facebook" height="22" width="22"></a></div>
+			<div class='btn-right'><a target="_blank" id="twitterSelectionShare" title="tweet"><img src="images/twitter.png" alt="twitter" height="22" width="22"></a></div>
 		</div>
 	</span>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="jQuery.highlighter.js"></script>
-<script type="text/javascript">
-		$(document).ready(function() {
-			$("html").highlighter({"selector": ".holder"});
+<script type="text/javascript" src="clipboard.min.js"></script>
 
-    
-		    $('.holder').mousedown(function(){
-		        return false;
-		    });
-			
-			/*$('.holder').mousedown(
-				sel = window.getSelection();
-                selText = sel.toString();
-				$("a[href='http://www.uniqueUrlForSelectionShareTwitter.com']").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim())
-			);*/
-
-		    $('.btn-right').click(function(){
-		        $('.holder').hide();
-		        return false;
-		    });
-		});
-	</script>
+<script>
+    var clipboard = new Clipboard('#copySelectionShare');
+    </script>
 </body>
 </html>

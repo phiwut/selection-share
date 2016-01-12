@@ -1,6 +1,26 @@
 /* global jQuery */
 
-   (function ($) {
+$(document).ready(function () {	
+    $("html").highlighter({ "selector": ".holder" });
+
+    $('.holder').mousedown(function () {
+        return false;
+    });
+
+    $('.btn-right').click(function () {
+		sel = window.getSelection();
+        selText = sel.toString();
+        $("#twitterSelectionShare").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim()) + ' ~ ' + window.location.protocol + "//" + window.location.host + "/")
+             .click();
+    });
+	
+	$('.btn-left').click(function () {
+		sel = window.getSelection();
+        selText = sel.toString();
+        $("#copySelectionShare").attr('data-clipboard-text', selText + ' ~ ' + window.location.href)
+    });
+});
+(function ($) {
     /*
      * Code for triple click from
      * http://css-tricks.com/snippets/jquery/triple-click-event/
@@ -66,14 +86,14 @@
             var settings = $.extend({
                 'selector': '.highlighter-container',
                 'minWords': 0,
-                'complete': function() {}
+                'complete': function () { }
             }, options);
             var numClicks = 0;
             var topOffset = 0;
             var leftOffset = 0;
             var isDown = false;
 
-        var selText;
+            var selText;
 
             return this.each(function () {
                 /*
@@ -121,7 +141,7 @@
                                 }
                                 // console.log(expandedSelRange);
                                 expandedSelRange.collapse(false);
-                            } else if(range.endOffset === 0 ) {
+                            } else if (range.endOffset === 0) {
                                 topOffset = -25;
                                 leftOffset = 40;
                             }
@@ -141,8 +161,8 @@
                                 expandedSelRange.insertNode(dummy);
                                 position = $(dummy).offset();
                                 dummy.parentNode.removeChild(dummy);
-                            }							
-                        }                        
+                            }
+                        }
                     } else if (document.selection && document.selection.createRange) {
                         range = document.selection.createRange();
                         expandedSelRange = range.duplicate();
@@ -161,7 +181,7 @@
 
                     $(settings.selector).css("top", position.top + topOffset + "px");
                     $(settings.selector).css("left", position.left + leftOffset + "px");
-                    $(settings.selector).show(300, function() {
+                    $(settings.selector).show(300, function () {
                         settings.complete(selText);
                     });
                 }
