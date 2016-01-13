@@ -1,11 +1,5 @@
 {
     "resources": {
-        "head": [
-            {
-                "type": "style",
-                "src": "tooltip.css"
-            }
-        ],
         "body": [
             {
                 "type": "script",
