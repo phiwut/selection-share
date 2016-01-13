@@ -1,7 +1,6 @@
 /* global jQuery */
 
-$(document).ready(function () {	
-	$("body").append("<script>var clipboard = new Clipboard(\'#copySelectionShare\');</script>");
+$(document).ready(function () {
 
     $("html").highlighter({ "selector": ".holder" });
 
@@ -9,17 +8,24 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.btn-right').click(function () {
-		sel = window.getSelection();
-        selText = sel.toString();
-        $("#twitterSelectionShare").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim()) + ' ~ ' + window.location.protocol + "//" + window.location.host + "/")
-             .click();
-    });
-	
-	$('.btn-left').click(function () {
-		sel = window.getSelection();
+    $('#copySelectionShare').click(function () {
+        sel = window.getSelection();
         selText = sel.toString();
         $("#copySelectionShare").attr('data-clipboard-text', selText + ' ~ ' + window.location.href)
+    });
+
+    $('#emailSelectionShare').click(function () {
+        sel = window.getSelection();
+        selText = sel.toString();
+        $("#emailSelectionShare").attr('href', 'mailto:?body=' + encodeURIComponent(selText.trim()) + '%20(' + window.location.protocol + "//" + window.location.host + "/)")
+             .click();
+    });
+
+    $('#twitterSelectionShare').click(function () {
+        sel = window.getSelection();
+        selText = sel.toString();
+        $("#twitterSelectionShare").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim()) + '%20(' + window.location.protocol + "//" + window.location.host + "/)")
+             .click();
     });
 });
 (function ($) {

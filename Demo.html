@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="app.css" />
+    <link rel="stylesheet" type="text/css" href="app.css" />
 </head>
 <body>
 
-<h1>Selection share</h1>
-<div class="article">
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-<br/>
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-<br/>
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
-</div>
+    <h1>Selection share</h1>
+    <div class="article">
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            <br />
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            <br />
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+    </div>
 
-<span class='holder'>
-		<div class='share-highlight-btn'>
-			<div class='btn-caret'></div>
-			<div class='btn-left'><a id="copySelectionShare" data-clipboard-text="copiedText" title="copy"><img src="images/copy.png" alt="facebook" height="22" width="22"></a></div>
-			<div class='btn-right'><a target="_blank" id="twitterSelectionShare" title="tweet"><img src="images/twitter.png" alt="twitter" height="22" width="22"></a></div>
-		</div>
-	</span>
+    <span class='holder'>
+        <div class='share-highlight-btn'>
+            <div class='btn-caret'></div>
+            <div class='selectionShareBtn'><a id="copySelectionShare" data-clipboard-text="copiedText" title="copy"><img src="images/copy.png" alt="copy" height="24" width="24"></a></div>
+            <div class='selectionShareBtn'><a target="_top" id="emailSelectionShare" title="email"><img src="images/email.png" alt="email" height="24" width="24"></a></div>
+            <div class='selectionShareBtn'><a target="_blank" id="twitterSelectionShare" title="tweet"><img src="images/twitter.png" alt="twitter" height="24" width="24"></a></div>
+        </div>
+    </span>
 
-<script src="jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="jQuery.highlighter.js"></script>
-<script type="text/javascript" src="clipboard.min.js"></script>
+    <script src="jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="jQuery.highlighter.js"></script>
+    <script type="text/javascript" src="clipboard.min.js"></script>
+    <script>
+        var clipboard = new Clipboard('#copySelectionShare');
+    </script>
 </body>
 </html>
