@@ -1,4 +1,6 @@
 # selection-share
+
+[![Join the chat at https://gitter.im/phippuuuu/selection-share](https://badges.gitter.im/phippuuuu/selection-share.svg)](https://gitter.im/phippuuuu/selection-share?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Share selected text.
 
 This plugin is ment to make it easy to share a text from a Website. When finished, it will be avaiable on the [Eager](https://eager.io/) when finished.
