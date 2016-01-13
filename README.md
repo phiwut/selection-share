@@ -14,6 +14,7 @@ Feel free to contribute to the code or submit a design for the Tooltip!
 - [ ] Add to [Eager](https://eager.io/)
 
 ##Optional:
+- [ ] mobile version
 - [ ] rewrite in Javascript instead of jQuerry
 - [ ] design
 - [ ] more designs to choose ((design toolbar)[http://codepen.io/phw/pen/eJRzbY])
