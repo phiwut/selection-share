@@ -28,7 +28,21 @@ $(document).ready(function () {
     $('#twitterSelectionShare').click(function () {
         sel = window.getSelection();
         selText = sel.toString();
-        $("#twitterSelectionShare").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim()) + '%20(' + window.location.protocol + "//" + window.location.host + "/)")
+        if(selText.length > 120)
+        {
+            var atest = selText.split(' ');
+            var selText = '';
+            var i = 0;
+            var maxlength = 120;
+            do
+            {
+                selText = selText + ' ' + atest[i];
+                i += 1;
+            } while (atest.length >= i && selText.length < maxlength);
+            selText = selText + '...';
+        }
+
+        $("#twitterSelectionShare").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim()) + '%20-%20' + window.location.protocol + "//" + window.location.host + "/")
              .click();
     });
 });
