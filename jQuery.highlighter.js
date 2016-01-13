@@ -4,6 +4,10 @@ $(document).ready(function () {
 
     $("html").highlighter({ "selector": ".holder" });
 
+    window.addEventListener("touchstart", function () {
+        return false;
+    });
+
     $('.holder').mousedown(function () {
         return false;
     });
