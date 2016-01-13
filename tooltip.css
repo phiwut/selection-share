@@ -1,0 +1,48 @@
+.share-highlight-btn {
+	position: absolute;
+	width: 300px;
+	top: 25px;
+	left: -30px;
+}
+
+.holder {
+	position: absolute;
+}
+
+::selection {
+	background: #F3F315;
+}
+
+::-moz-selection {
+	background: #F3F315;
+}
+
+.btn-caret {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #0D1126;
+	position: absolute;
+	top: -5px;
+	left: 12px;
+}
+
+.selectionShareBtn {
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	padding: 3px 5px 0 5px;
+	cursor: pointer;
+	background: #0D1126;
+	-webkit-transition: background 0.1s ease-out;
+	-moz-transition: background 0.1s ease-out;
+	-o-transition: background 0.1s ease-out;
+	transition: background 0.1s ease-out;
+}
+
+	.selectionShareBtn:hover {
+		background: #696969;
+	}
+
+​

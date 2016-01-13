@@ -1,0 +1,50 @@
+{
+    "resources": {
+        "head": [
+            {
+                "type": "style",
+                "src": "tooltip.css"
+            }
+        ],
+        "body": [
+            {
+                "type": "script",
+                "src": "jquery-2.2.0.min.js"
+            },
+            {
+                "type": "script",
+                "src": "jQuery.highlighter.js"
+            },
+            {
+                "type": "script",
+                "src": "clipboard.min.js"
+            },
+            {
+                "type": "script",
+                "src": "clipboard.js"
+            }
+        ]
+    },
+    "options": {
+        "properties": {
+            "hlcolor": {
+                "title": "Highlight color",
+                "type": "string",
+                "format": "color",
+                "default": "#F3F315"
+            },
+            "ttcolor": {
+                "title": "Tooltipp color",
+                "type": "string",
+                "format": "color",
+                "default": "#0D1126"
+            },
+            "tthcolor": {
+                "title": "Tooltipp hover color",
+                "type": "string",
+                "format": "color",
+                "default": "#696969"
+            }
+        }
+    }
+}
