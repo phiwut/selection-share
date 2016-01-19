@@ -20,7 +20,7 @@ Feel free to contribute to the code or submit a design for the Tooltip!
 - [ ] mobile version
 - [ ] rewrite in Javascript instead of jQuerry
 - [ ] design
-- [ ] more designs to choose ((design toolbar)[http://codepen.io/phw/pen/eJRzbY])
+- [ ] more designs to choose ([design toolbar](http://codepen.io/phw/pen/eJRzbY))
   - [ ] let people on [Eager](https://eager.io/) costumize it
 - [ ] add button to copy link to paragraph
 - [ ] add more social networks
