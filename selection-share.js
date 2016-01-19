@@ -1,22 +1,7 @@
 /* global jQuery */
 
 $(document).ready(function () {
-    
-    $( "body" ).append( "<span class='holder'> \
-<div class='share-highlight-btn'> \
-<div class='btn-caret'></div> \
-<div class='selectionShareBtn'><a id=\"copySelectionShare\" data-clipboard-text=\"copiedText\" title=\"copy\"><img src=\"images/copy.png\" alt=\"copy\" height=\"24\" width=\"24\"></a></div> \
-<div class='selectionShareBtn'><a target=\"_top\" id=\"emailSelectionShare\" title=\"email\"><img src=\"images/email.png\" alt=\"email\" height=\"24\" width=\"24\"></a></div> \
-<div class=\'selectionShareBtn\'><a target=\"_blank\" id=\"twitterSelectionShare\" title=\"tweet\"><img src=\"images/twitter.png\" alt=\"twitter\" height=\"24\" width=\"24\"></a></div> \
-</div> \
-</span> \
-    " );
-
     $("html").highlighter({ "selector": ".holder" });
-
-    window.addEventListener("touchstart", function () {
-        return false;
-    });
 
     $('.holder').mousedown(function () {
         return false;
@@ -25,34 +10,44 @@ $(document).ready(function () {
     $('#copySelectionShare').click(function () {
         sel = window.getSelection();
         selText = sel.toString();
-        $("#copySelectionShare").attr('data-clipboard-text', selText + ' ~ ' + window.location.href)
+        $("#copySelectionShare").attr('data-clipboard-text', selText + ' - ' + window.location.href);
+        var $el = $("#copySelectionShare"),
+        x = 300
+
+        $el.css("background", "#75FF55");
+        setTimeout(function () {
+            $el.removeAttr('style');
+        }, x);
+
     });
 
     $('#emailSelectionShare').click(function () {
         sel = window.getSelection();
         selText = sel.toString();
-        $("#emailSelectionShare").attr('href', 'mailto:?body=' + encodeURIComponent(selText.trim()) + '%20(' + window.location.protocol + "//" + window.location.host + "/)")
+        $("#emailSelectionShare").attr('href', 'mailto:?body=' + encodeURIComponent(selText.trim()) + '%20-%20' + window.location.protocol + "//" + window.location.host)
              .click();
     });
 
     $('#twitterSelectionShare').click(function () {
         sel = window.getSelection();
         selText = sel.toString();
-        if(selText.length > 120)
-        {
+        url = "";
+        url = window.location.protocol + "//" + window.location.host;
+        usr = "";
+        usr = "@p_wueth";
+        if (selText.length > (137 - (url.length + usr.length))) {
             var atest = selText.split(' ');
             var selText = '';
             var i = 0;
-            var maxlength = 120;
-            do
-            {
+            var maxlength = (128 - (url.length + usr.length));
+            do {
                 selText = selText + ' ' + atest[i];
                 i += 1;
             } while (atest.length >= i && selText.length < maxlength);
             selText = selText + '...';
         }
 
-        $("#twitterSelectionShare").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim()) + '%20-%20' + window.location.protocol + "//" + window.location.host + "/")
+        $("#twitterSelectionShare").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(selText.trim()) + '%20'+ usr +'%20-%20' + url)
              .click();
     });
 });

@@ -1,13 +1,13 @@
 {
     "resources": {
-        "body": [
+        "head": [
             {
                 "type": "script",
-                "src": "jquery-2.2.0.min.js"
+                "src": "insert.js"
             },
             {
                 "type": "script",
-                "src": "jQuery.highlighter.js"
+                "src": "jquery-2.2.0.min.js"
             },
             {
                 "type": "script",
@@ -16,6 +16,10 @@
             {
                 "type": "script",
                 "src": "clipboard.js"
+            },
+            {
+                "type": "script",
+                "src": "selection-share.js"
             }
         ]
     },
@@ -38,7 +42,16 @@
                 "type": "string",
                 "format": "color",
                 "default": "#696969"
-            }
+            },
+            "advancedOptionsToggle": {
+        "title": "Show advanced options",
+        "type": "boolean"
+      },
+      "advancedOptions": {
+        "showIf": "advancedOptionsToggle",
+        "title": "Advanced Options",
+        "type": "object"
         }
+      }
     }
 }

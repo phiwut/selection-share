@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="app.css" />
+    <link rel="stylesheet" type="text/css" href="tooltip.css" />
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <style>
     body {
-        background-color: #BF3F6E;
+        background-color: #0B0B3B;
     }
 
     #main {
-        color: #ffffff;
         font-family: Lato;
         max-width: 800px;
         margin: 50px auto;
         padding: 20px 30px;
-        background-color: #3E608C;
-        -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+        background-color: #ffffff;
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
     }
 
     h1 {
@@ -64,14 +63,14 @@
     <span class='holder'>
         <div class='share-highlight-btn'>
             <div class='btn-caret'></div>
-            <div class='selectionShareBtn'><a id="copySelectionShare" data-clipboard-text="copiedText" title="copy"><img src="images/copy.png" alt="copy" height="24" width="24"></a></div>
+            <div class='selectionShareBtn' id="copySelectionShare" data-clipboard-text="copiedText" title="copy"><img src="images/copy.png" alt="copy" height="24" width="24"></div>
             <div class='selectionShareBtn'><a target="_top" id="emailSelectionShare" title="email"><img src="images/email.png" alt="email" height="24" width="24"></a></div>
             <div class='selectionShareBtn'><a target="_blank" id="twitterSelectionShare" title="tweet"><img src="images/twitter.png" alt="twitter" height="24" width="24"></a></div>
         </div>
     </span>
 
     <script src="jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="jQuery.highlighter.js"></script>
+    <script type="text/javascript" src="selection-share.js"></script>
     <script type="text/javascript" src="clipboard.min.js"></script>
     <script type="text/javascript" src="clipboard.js"></script>
 </body>
