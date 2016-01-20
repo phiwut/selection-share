@@ -1,13 +1,13 @@
 {
     "resources": {
-        "head": [
+        "body": [
             {
-                "type": "script",
-                "src": "insert.js"
+                "type": "style",
+                "src": "style.css"
             },
             {
                 "type": "script",
-                "src": "jquery-2.2.0.min.js"
+                "src": "insert.js"
             },
             {
                 "type": "script",
@@ -19,9 +19,16 @@
             },
             {
                 "type": "script",
-                "src": "selection-share.js"
+                "src": "selection-share.js",
+                "moduleType": "global",
+                "depends": {
+                  "github.com/jquery/jquery:jquery.js": "jQuery"
+                }
             }
         ]
+    },
+    "dependencies": {
+      "github.com/jquery/jquery": ">= 1.7.0, <= 1.10.2"
     },
     "options": {
         "properties": {

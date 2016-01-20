@@ -1,6 +1,6 @@
 /* global jQuery */
 
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
     $("html").highlighter({ "selector": ".holder" });
 
     $('.holder').mousedown(function () {
